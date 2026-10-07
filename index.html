@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tahmid Bhuiyan — Information Technology student at UCF, developer, and AI enthusiast based in Orlando, FL.">
-    <title>Tahmid Bhuiyan</title>
+    <meta name="description" content="Tahmid Bhuiyan — Information Technology student at UCF, developer. A nostalgic classic-Roblox themed portfolio.">
+    <title>tahxmidd — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Loading screen -->
+    <div class="loader" id="loader">
+        <p class="loader-rbx-logo">ROBLOX</p>
+        <p class="loader-logo">tahxmidd</p>
+        <div class="loader-stats">
+            <span>Bricks: <span id="bricksCount">0</span></span>
+            <span>Connectors: <span id="connectorsCount">0</span></span>
+        </div>
+    </div>
+
+    <!-- Thin utility bar -->
+    <div class="util-bar">
+        <div class="util-inner">
+            <span>Welcome, Guest!</span>
+            <span class="util-right"><a href="#contact">Log In</a><a href="#contact">Sign Up</a></span>
+        </div>
+    </div>
+
+    <!-- Main nav -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#hero" class="nav-name">Tahmid Bhuiyan</a>
+            <a href="#top" class="nav-logo">tahxmidd</a>
             <ul class="nav-links">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">Profile</a></li>
+                <li><a href="#places">My Places</a></li>
+                <li><a href="#catalog">Catalog</a></li>
+                <li><a href="#inventory">Inventory</a></li>
+                <li><a href="#badges">Badges</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -24,279 +47,453 @@
             </button>
         </div>
         <div class="nav-mobile" id="navMobile">
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
+            <a href="#about">Profile</a>
+            <a href="#places">My Places</a>
+            <a href="#catalog">Catalog</a>
+            <a href="#inventory">Inventory</a>
+            <a href="#badges">Badges</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <p class="hero-eyebrow">Hello, I'm</p>
-            <h1 class="hero-name">Tahmid<br>Bhuiyan.</h1>
-            <p class="hero-subtitle">IT Student &amp; Developer at UCF</p>
-            <p class="hero-desc">Building things at the intersection of AI and software.<br>Based in Orlando, FL.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    <div id="top"></div>
+
+    <!-- Profile Header -->
+    <header class="profile-header">
+        <div class="container profile-header-inner">
+            <div class="avatar-box">
+                <div class="avatar-thumb">
+                    <img src="assets/roblox-avatar.png" alt="Tahmid's original Roblox avatar" class="avatar-img avatar-img-roblox">
+                    <img src="assets/face-photo.png" alt="Tahmid Bhuiyan" class="avatar-img avatar-img-face" onerror="this.style.display='none';">
+                </div>
+                <div class="avatar-online"><span class="dot"></span> Online</div>
+                <p class="avatar-hint">hover to see me irl</p>
             </div>
-            <div class="hero-links">
-                <a href="https://github.com/tahxmidd" target="_blank" rel="noopener">GitHub ↗</a>
-                <a href="https://linkedin.com/in/tahxmid" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <div class="profile-id">
+                <h1 class="profile-name">Tahmid Bhuiyan</h1>
+                <p class="profile-username">@tahxmidd</p>
+                <p class="profile-blurb">second-year it student at ucf. childhood roblox builder currently diving into network security and keeping my options open across tech.</p>
+                <div class="profile-actions">
+                    <a href="#contact" class="rbx-btn rbx-btn-green">+ Add Friend</a>
+                    <a href="#places" class="rbx-btn rbx-btn-blue">View My Places</a>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div class="stat-box">
+                    <span class="stat-num">2</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">4</span>
+                    <span class="stat-label">Places Worked</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-num">1</span>
+                    <span class="stat-label">Badges</span>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="hero-characters" aria-hidden="true">
+            <img src="assets/roblox-character.png" alt="" class="hero-char hero-char-sm">
+            <img src="assets/roblox-character.png" alt="" class="hero-char hero-char-lg">
+            <img src="assets/roblox-character.png" alt="" class="hero-char hero-char-sm hero-char-flip">
+        </div>
+        <div class="stud-strip" aria-hidden="true"></div>
+    </header>
 
-    <!-- Projects -->
-    <section id="projects" class="section bg-gray">
-        <div class="container">
-            <p class="label">Featured Work</p>
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-
-                <div class="project-card fade-in">
-                    <div class="project-top">
-                        <div>
-                            <h3 class="project-name">Pegasus Pair</h3>
-                            <p class="project-tagline">UCF Student Matching Platform</p>
-                        </div>
-                        <a href="https://pegasuspair.com" target="_blank" rel="noopener" class="project-arrow" aria-label="Visit Pegasus Pair">↗</a>
+    <!-- Homepage-style strip: featured creation + concept explainer -->
+    <section class="section homepage-strip">
+        <div class="container homepage-grid">
+            <div class="bevel-panel featured-panel fade-in">
+                <div class="panel-titlebar">Featured Creation</div>
+                <div class="featured-body">
+                    <div class="featured-thumb" style="--accent:#3A6EA8;">
+                        <img src="assets/logos/pegasus-pair.png" alt="Pegasus Pair logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">PP</span>
                     </div>
-                    <p class="project-desc">Co-founded and led full-stack development of a student matching web app serving 1K+ live users. Built with Supabase auth and row-level security. Drove organic growth from zero through campus-wide marketing.</p>
-                    <div class="project-stats">
-                        <div class="stat-item">
-                            <span class="stat-num">1K+</span>
-                            <span class="stat-label">Live Users</span>
+                    <div class="featured-info">
+                        <h3 class="featured-name">Pegasus Pair</h3>
+                        <p class="featured-tagline">UCF Student Matching Platform · By tahxmidd</p>
+                        <div class="featured-stats">
+                            <span>★★★★★</span>
+                            <span>Visited 1,000+ times</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-num">400K+</span>
-                            <span class="stat-label">Views</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">1K+</span>
-                            <span class="stat-label">Followers</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">Vercel</span>
-                    </div>
-                    <div class="project-meta-row">
-                        <span class="project-role">Co-Founder &amp; Lead Developer</span>
-                        <span class="project-date">April 2026</span>
+                        <a href="https://pegasuspair.com" target="_blank" rel="noopener" class="rbx-btn-pill">Play Now</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card fade-in">
-                    <div class="project-top">
-                        <div>
-                            <h3 class="project-name">Kitchennaire</h3>
-                            <p class="project-tagline">AI Cooking Assistant</p>
-                        </div>
-                        <span class="project-badge">Knight Hacks 2025</span>
-                    </div>
-                    <p class="project-desc">Full-stack React Native cooking app that generates step-by-step instructions from YouTube transcriptions. Features a TensorFlow CNN for real-time hand gesture detection enabling hands-free control, and OpenAI Vision API for ingredient identification from photos.</p>
-                    <div class="project-highlights">
-                        <p>↳ Real-time gesture detection via TensorFlow CNN (5+ gestures)</p>
-                        <p>↳ OpenAI Vision API ingredient identification</p>
-                        <p>↳ YouTube transcript-based recipe generation</p>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">React Native</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">Expo</span>
-                        <span class="tag">OpenAI API</span>
-                    </div>
-                    <div class="project-meta-row">
-                        <span class="project-role">Developer</span>
-                        <span class="project-date">October 2025</span>
-                    </div>
+            <div class="homepage-sidebar">
+                <div class="bevel-panel sidebar-box fade-in">
+                    <div class="panel-titlebar">Why Does This Site Look Like This?</div>
+                    <p class="sidebar-text">roblox was a huge part of my childhood, and building places in it is honestly what got me into programming — it eventually led to my first real job. this whole site is styled after classic roblox (circa 2008–2012) as a little tribute to where it all started. everything's still a real portfolio underneath: my actual jobs, projects, and skills, just dressed up as places, catalog items, and inventory.</p>
                 </div>
-
+                <div class="bevel-panel sidebar-box fade-in">
+                    <div class="panel-titlebar">Fun Facts</div>
+                    <ul class="fun-facts">
+                        <li><span class="stat-tag">01</span> taught roblox lua to kids for 2+ years</li>
+                        <li><span class="stat-tag">02</span> now diving into network security</li>
+                        <li><span class="stat-tag">03</span> co-founded a startup with 1K+ users</li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <div class="stud-strip" aria-hidden="true"></div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section">
+    <!-- About / Profile Info -->
+    <section id="about" class="section">
         <div class="container">
-            <p class="label">Work History</p>
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
+            <p class="section-eyebrow">Player Profile</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="bevel-panel about-info">
+                    <div class="panel-titlebar">Info</div>
+                    <ul class="info-list">
+                        <li><span class="info-key">Location</span><span class="info-val">Lake Mary, FL</span></li>
+                        <li><span class="info-key">School</span><span class="info-val">University of Central Florida</span></li>
+                        <li><span class="info-key">Studying</span><span class="info-val">B.S. Information Technology</span></li>
+                        <li><span class="info-key">Grad Year</span><span class="info-val">Expected May 2028</span></li>
+                        <li><span class="info-key">First Joined Roblox</span><span class="info-val">Childhood, ~2008</span></li>
+                        <li><span class="info-key">Status</span><span class="info-val">Open to internships</span></li>
+                    </ul>
+                </div>
+                <div class="bevel-panel about-bio">
+                    <div class="panel-titlebar">About</div>
+                    <p>i grew up playing and building on roblox — it's actually what got me into programming in the first place. developing places and trying to make games with lua scripting turned into teaching kids how to make their own scripts and games, and it really opened my mind to all the different paths you can take in tech.</p>
+                    <p>right now, i'm studying it at ucf, interning as a software engineer, and building a platform called pegasus pair to help students at our school make friends. since roblox was the original inspiration for my tech journey, this site is just a little tribute to where it all started.</p>
+                    <p>relevant coursework: computer logic &amp; organization, object-oriented programming (java), security in computing.</p>
+                </div>
+            </div>
 
-                <div class="timeline-item fade-in">
-                    <div class="tl-meta">
-                        <span class="tl-date">Mar 2026 – Present</span>
-                        <span class="tl-current">Current</span>
+            <div class="bevel-panel roblox-throwback fade-in">
+                <div class="panel-titlebar">Where It Started</div>
+                <div class="throwback-body">
+                    <img src="assets/roblox-creations.png" alt="Screenshot of Tahmid's real Roblox Creator dashboard, showing old game worlds like Sensei Tahmid's World and Example Obby" class="throwback-img">
+                    <div class="throwback-text">
+                        <p>these are actual places from my roblox account — still sitting there from when i was a kid trying to figure out how bricks and scripts fit together.</p>
+                        <a href="https://www.roblox.com/users/58497223/profile" target="_blank" rel="noopener" class="rbx-btn rbx-btn-blue">View My Roblox Profile ↗</a>
                     </div>
-                    <div class="tl-content">
-                        <h3 class="tl-role">AI Research Analyst</h3>
-                        <p class="tl-company">Handshake AI · Orlando, FL</p>
-                        <ul>
-                            <li>Evaluated and ranked model-generated responses for Project Ohm, contributing to LLM alignment training datasets.</li>
-                            <li>Assessed AI outputs against prompt intent, reasoning quality, and communication criteria to improve model accuracy.</li>
+                </div>
+            </div>
+        </div>
+        <div class="stud-strip" aria-hidden="true"></div>
+    </section>
+
+    <!-- My Places (Experience) -->
+    <section id="places" class="section bg-grey">
+        <div class="container">
+            <p class="section-eyebrow">Work History</p>
+            <h2 class="section-title">My Places</h2>
+            <p class="section-sub">Every job, ranked like a Roblox place page.</p>
+
+            <div class="places-list">
+
+                <article class="place-card fade-in">
+                    <div class="place-thumb" style="--accent:#3A6EA8;">
+                        <img src="assets/logos/eugenia-grace.png" alt="Eugenia Grace logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">EG</span>
+                    </div>
+                    <div class="place-body">
+                        <div class="place-top">
+                            <div>
+                                <h3 class="place-title">Eugenia Grace <span class="badge-playing">Playing Now</span></h3>
+                                <p class="place-role">Software Engineering Intern</p>
+                            </div>
+                            <a href="#" class="rbx-btn-pill place-play" data-placeholder-link="eugenia-grace">Play Now</a>
+                        </div>
+                        <ul class="place-stats">
+                            <li><span class="stat-tag">Duration</span> June 2026 – Present</li>
+                            <li><span class="stat-tag">Location</span> Remote</li>
+                        </ul>
+                        <ul class="place-desc">
+                            <li>Engineered a luxury Shopify storefront from scratch with custom Liquid and CSS — the primary investor-facing web presence for a $750K pre-launch seed raise.</li>
+                            <li>Architected multi-vendor drop-shipping infrastructure, integrating Duoplane and ShipTurtle to automate order splitting, carrier label generation, and Airtable CRM syncing.</li>
+                            <li>Developed 8 dynamic CMS components so non-technical stakeholders could manage frontend content without touching the codebase.</li>
                         </ul>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item fade-in">
-                    <div class="tl-meta">
-                        <span class="tl-date">May – Aug 2025</span>
+                <article class="place-card fade-in">
+                    <div class="place-thumb" style="--accent:#4C9A2A;">
+                        <img src="assets/logos/loyal-source.png" alt="Loyal Source logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">LS</span>
                     </div>
-                    <div class="tl-content">
-                        <h3 class="tl-role">AI Analytics Intern</h3>
-                        <p class="tl-company">Loyal Source · Orlando, FL</p>
-                        <ul>
+                    <div class="place-body">
+                        <div class="place-top">
+                            <div>
+                                <h3 class="place-title">Loyal Source</h3>
+                                <p class="place-role">AI Analytics Intern</p>
+                            </div>
+                            <a href="https://www.loyalsource.com/" target="_blank" rel="noopener" class="rbx-btn rbx-btn-blue place-play">Visit ↗</a>
+                        </div>
+                        <ul class="place-stats">
+                            <li><span class="stat-tag">Duration</span> May 2025 – Aug 2025</li>
+                            <li><span class="stat-tag">Location</span> Orlando, FL</li>
+                        </ul>
+                        <ul class="place-desc">
                             <li>Identified ML integration opportunities within clinical data workflows, automating routine reporting for CBP medical support services.</li>
-                            <li>Built Tableau visualizations on pilot datasets delivering proof-of-concept insights for clinical management modernization.</li>
+                            <li>Built Tableau visualizations on pilot datasets, delivering proof-of-concept insights for modernization of clinical management systems.</li>
                         </ul>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item fade-in">
-                    <div class="tl-meta">
-                        <span class="tl-date">Jul 2024 – Jul 2025</span>
+                <article class="place-card fade-in">
+                    <div class="place-thumb" style="--accent:#C9A227;">
+                        <img src="assets/logos/storage-parts-direct.png" alt="Storage Parts Direct logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">SPD</span>
                     </div>
-                    <div class="tl-content">
-                        <h3 class="tl-role">Sales Manager</h3>
-                        <p class="tl-company">Storage Parts Direct · Lake Mary, FL</p>
-                        <p class="tl-promo">Promoted from Sales &amp; Marketing Associate after 4 months</p>
-                        <ul>
-                            <li>Oversaw $100K+ in B2B transactions across BrokerBin, QuickBooks Enterprise, and PayPal.</li>
-                            <li>Managed BigCommerce backend including inventory, discrepancy resolution, and UPS/FedEx shipping logistics.</li>
-                            <li>Served as primary broker liaison for order verification, technical support, and financial reconciliation.</li>
+                    <div class="place-body">
+                        <div class="place-top">
+                            <div>
+                                <h3 class="place-title">Storage Parts Direct</h3>
+                                <p class="place-role">Sales Manager <span class="place-promo">↑ promoted from Sales &amp; Marketing Associate</span></p>
+                            </div>
+                            <a href="https://storagepartsdirect.com/" target="_blank" rel="noopener" class="rbx-btn rbx-btn-blue place-play">Visit ↗</a>
+                        </div>
+                        <ul class="place-stats">
+                            <li><span class="stat-tag">Duration</span> July 2024 – July 2025</li>
+                            <li><span class="stat-tag">Location</span> Lake Mary, FL</li>
+                        </ul>
+                        <ul class="place-desc">
+                            <li>Promoted to Sales Manager after 4 months, overseeing $100K+ in B2B transactions across BrokerBin, QuickBooks Enterprise, Authorize.net, and PayPal.</li>
                         </ul>
                     </div>
-                </div>
+                </article>
 
-                <div class="timeline-item fade-in">
-                    <div class="tl-meta">
-                        <span class="tl-date">Apr 2022 – Sep 2024</span>
+                <article class="place-card fade-in">
+                    <div class="place-thumb" style="--accent:#8C3AA8;">
+                        <img src="assets/logos/code-ninjas.png" alt="Code Ninjas logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">CN</span>
                     </div>
-                    <div class="tl-content">
-                        <h3 class="tl-role">Curriculum Lead &amp; Technical Instructor</h3>
-                        <p class="tl-company">Code Ninjas · Sanford, FL</p>
-                        <ul>
-                            <li>Designed and led statewide rollout of a Roblox Lua coding curriculum adopted across multiple franchise locations.</li>
-                            <li>Taught Java and JavaScript to students ages 7–14, translating abstract programming concepts into game mechanics.</li>
+                    <div class="place-body">
+                        <div class="place-top">
+                            <div>
+                                <h3 class="place-title">Code Ninjas</h3>
+                                <p class="place-role">Curriculum Lead &amp; Technical Instructor</p>
+                            </div>
+                            <a href="https://www.codeninjas.com/fl-lake-mary" target="_blank" rel="noopener" class="rbx-btn rbx-btn-blue place-play">Visit ↗</a>
+                        </div>
+                        <ul class="place-stats">
+                            <li><span class="stat-tag">Duration</span> April 2022 – Sept 2024</li>
+                            <li><span class="stat-tag">Location</span> Sanford, FL</li>
+                        </ul>
+                        <ul class="place-desc">
+                            <li>Designed and led a statewide rollout of a Roblox Lua coding curriculum, adopted across multiple franchise locations — the job that came full circle from my childhood on the platform.</li>
+                            <li>Taught Java and JavaScript to students ages 7–14, translating abstract programming concepts into applied logic and game mechanics.</li>
                         </ul>
                     </div>
-                </div>
+                </article>
 
             </div>
         </div>
+        <div class="stud-strip" aria-hidden="true"></div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section bg-gray">
+    <!-- Catalog (Projects) -->
+    <section id="catalog" class="section">
         <div class="container">
-            <p class="label">Technical</p>
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-group fade-in">
-                    <h4 class="skill-label">Languages</h4>
-                    <div class="chips">
-                        <span class="chip">JavaScript</span>
-                        <span class="chip">TypeScript</span>
-                        <span class="chip">Python</span>
-                        <span class="chip">Java</span>
-                        <span class="chip">Lua</span>
-                        <span class="chip">SQL</span>
-                        <span class="chip">Bash</span>
-                        <span class="chip">PowerShell</span>
-                    </div>
-                </div>
-                <div class="skill-group fade-in">
-                    <h4 class="skill-label">Frameworks &amp; Libraries</h4>
-                    <div class="chips">
-                        <span class="chip">React</span>
-                        <span class="chip">Next.js</span>
-                        <span class="chip">React Native</span>
-                        <span class="chip">TensorFlow</span>
-                        <span class="chip">Expo</span>
-                        <span class="chip">Flask</span>
-                        <span class="chip">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="skill-group fade-in">
-                    <h4 class="skill-label">Tools &amp; Platforms</h4>
-                    <div class="chips">
-                        <span class="chip">Supabase</span>
-                        <span class="chip">PostgreSQL</span>
-                        <span class="chip">Vercel</span>
-                        <span class="chip">Git</span>
-                        <span class="chip">Tableau</span>
-                        <span class="chip">OpenAI API</span>
-                        <span class="chip">BigCommerce</span>
-                    </div>
-                </div>
-            </div>
+            <p class="section-eyebrow">Featured Work</p>
+            <h2 class="section-title">Catalog</h2>
+            <p class="section-sub">Things I've built, shelved like catalog items.</p>
 
-            <div class="cert fade-in">
-                <div class="cert-icon">✦</div>
-                <div>
-                    <p class="cert-name">CompTIA Technology Fundamentals</p>
-                    <p class="cert-meta">Competency Certificate · April 2026</p>
+            <div class="catalog-grid">
+
+                <div class="catalog-item fade-in">
+                    <div class="catalog-ribbon">Limited</div>
+                    <div class="catalog-thumb" style="--accent:#3A6EA8;">
+                        <img src="assets/logos/pegasus-pair.png" alt="Pegasus Pair logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">PP</span>
+                    </div>
+                    <div class="catalog-body">
+                        <h3 class="catalog-name">Pegasus Pair</h3>
+                        <p class="catalog-tagline">UCF Student Matching Platform</p>
+                        <p class="catalog-desc">Co-founded and led full-stack development of a student matching web app serving 1K+ live users, with Supabase auth and row-level security. Drove 400K+ views and 1K followers through campus-wide marketing.</p>
+                        <div class="catalog-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Supabase</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+                        <div class="catalog-footer">
+                            <span class="catalog-role">Co-Founder &amp; Lead Developer</span>
+                            <a href="https://pegasuspair.com" target="_blank" rel="noopener" class="rbx-btn rbx-btn-green">Take a Look ↗</a>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="catalog-item fade-in">
+                    <div class="catalog-ribbon catalog-ribbon-event">Event Item</div>
+                    <div class="catalog-thumb" style="--accent:#4C9A2A;">
+                        <img src="assets/logos/kitchennaire.png" alt="Kitchennaire logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <span class="thumb-fallback">KN</span>
+                    </div>
+                    <div class="catalog-body">
+                        <h3 class="catalog-name">Kitchennaire</h3>
+                        <p class="catalog-tagline">AI Cooking Assistant · Knight Hacks 2025</p>
+                        <p class="catalog-desc">Built a React Native cooking app integrating a TensorFlow CNN for real-time hand-gesture detection and the OpenAI Vision API for ingredient recognition — hands-free recipes while you cook.</p>
+                        <div class="catalog-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Expo</span>
+                            <span class="tag">OpenAI API</span>
+                        </div>
+                        <div class="catalog-footer">
+                            <span class="catalog-role">Developer</span>
+                            <a href="#" class="rbx-btn rbx-btn-blue" data-placeholder-link="kitchennaire">Take a Look ↗</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+        <div class="stud-strip" aria-hidden="true"></div>
     </section>
 
-    <!-- Education -->
-    <section class="section">
+    <!-- Inventory (Skills) -->
+    <section id="inventory" class="section bg-grey">
         <div class="container">
-            <p class="label">Academic</p>
-            <h2 class="section-title">Education</h2>
-            <div class="edu-list">
-                <div class="edu-item fade-in">
-                    <div class="edu-left">
-                        <h3 class="edu-school">University of Central Florida</h3>
-                        <p class="edu-degree">B.S. in Information Technology</p>
-                        <p class="edu-note">Relevant: Computer Logic &amp; Organization</p>
-                    </div>
-                    <div class="edu-right">
-                        <span class="edu-date">Expected May 2028</span>
-                        <span class="edu-loc">Orlando, FL</span>
-                    </div>
+            <p class="section-eyebrow">Technical</p>
+            <h2 class="section-title">Inventory</h2>
+            <p class="section-sub">Gear collected over the years. Rarity reflects how much I reach for it.</p>
+
+            <div class="bevel-panel inventory-panel">
+                <div class="inventory-tabs" role="tablist">
+                    <button class="inv-tab active" data-tab="languages" role="tab" aria-selected="true">Languages</button>
+                    <button class="inv-tab" data-tab="frameworks" role="tab" aria-selected="false">Frameworks &amp; Tools</button>
+                    <button class="inv-tab" data-tab="security" role="tab" aria-selected="false">Security</button>
                 </div>
-                <div class="edu-item fade-in">
-                    <div class="edu-left">
-                        <h3 class="edu-school">Seminole State College</h3>
-                        <p class="edu-degree">Associate of Arts (A.A.)</p>
-                    </div>
-                    <div class="edu-right">
-                        <span class="edu-date">April 2025</span>
-                        <span class="edu-loc">Sanford, FL</span>
-                    </div>
+
+                <div class="inventory-grid" data-panel="languages">
+                    <div class="inv-item rarity-legendary"><span class="inv-icon">JS</span><span class="inv-name">JavaScript</span></div>
+                    <div class="inv-item rarity-legendary"><span class="inv-icon">TS</span><span class="inv-name">TypeScript</span></div>
+                    <div class="inv-item rarity-legendary"><span class="inv-icon">PY</span><span class="inv-name">Python</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">JV</span><span class="inv-name">Java</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">SQL</span><span class="inv-name">SQL</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">SH</span><span class="inv-name">Bash</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">PS</span><span class="inv-name">PowerShell</span></div>
+                    <div class="inv-item rarity-legendary inv-item-easter" title="The one that started it all"><span class="inv-icon">LUA</span><span class="inv-name">Lua</span></div>
+                </div>
+
+                <div class="inventory-grid" data-panel="frameworks" hidden>
+                    <div class="inv-item rarity-legendary"><span class="inv-icon">⚛</span><span class="inv-name">React</span></div>
+                    <div class="inv-item rarity-legendary"><span class="inv-icon">N.</span><span class="inv-name">Next.js</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">SB</span><span class="inv-name">Supabase</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">PG</span><span class="inv-name">PostgreSQL</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">SP</span><span class="inv-name">Shopify</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">TB</span><span class="inv-name">Tableau</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">TF</span><span class="inv-name">TensorFlow</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">GIT</span><span class="inv-name">Git</span></div>
+                </div>
+
+                <div class="inventory-grid" data-panel="security" hidden>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">IP</span><span class="inv-name">TCP/IP</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">DNS</span><span class="inv-name">DNS</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">FW</span><span class="inv-name">Firewalls</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">IOC</span><span class="inv-name">IOCs</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">TTP</span><span class="inv-name">TTPs</span></div>
+                    <div class="inv-item rarity-rare"><span class="inv-icon">ATT</span><span class="inv-name">MITRE ATT&amp;CK</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">CIA</span><span class="inv-name">CIA Triad</span></div>
+                    <div class="inv-item rarity-uncommon"><span class="inv-icon">RM</span><span class="inv-name">Risk Mgmt</span></div>
                 </div>
             </div>
         </div>
+        <div class="stud-strip" aria-hidden="true"></div>
+    </section>
+
+    <!-- Badges + Groups -->
+    <section id="badges" class="section">
+        <div class="container">
+            <p class="section-eyebrow">Recognition</p>
+            <h2 class="section-title">Badges &amp; Groups</h2>
+
+            <div class="badges-grid">
+                <div class="bevel-panel badge-card fade-in">
+                    <div class="panel-titlebar">Badge Earned</div>
+                    <div class="badge-body">
+                        <div class="badge-icon">✦</div>
+                        <div>
+                            <p class="badge-name">CompTIA Technology Fundamentals</p>
+                            <p class="badge-meta">Competency Certificate · Awarded April 2026</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bevel-panel group-card fade-in">
+                    <div class="panel-titlebar">Group</div>
+                    <div class="group-body">
+                        <div class="group-icon">MA</div>
+                        <div>
+                            <p class="group-name">Materials Advantage at UCF</p>
+                            <p class="group-role">Software Lead · 2026 – Present</p>
+                            <p class="group-desc">Building internal tools and managing technical workflows for UCF's materials science org. Site's still in progress — more soon.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bevel-panel group-card fade-in">
+                    <div class="panel-titlebar">Group</div>
+                    <div class="group-body">
+                        <div class="group-icon">SC</div>
+                        <div>
+                            <p class="group-name">SCRO @ UCF</p>
+                            <p class="group-role">Software Lead · 2026 – Present</p>
+                            <p class="group-desc">The Semiconductor Career Readiness Organization — workshops, industry connections, and career prep for future semiconductor engineers. I lead software for their tools and site.</p>
+                            <a href="https://scroucf.netlify.app/" target="_blank" rel="noopener" class="rbx-btn rbx-btn-blue group-link">Visit Group ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bevel-panel edu-panel fade-in">
+                <div class="panel-titlebar">Education</div>
+                <ul class="edu-list">
+                    <li>
+                        <div>
+                            <span class="edu-school">University of Central Florida</span>
+                            <span class="edu-degree">B.S. in Information Technology</span>
+                        </div>
+                        <div class="edu-right">
+                            <span>Expected May 2028</span>
+                            <span>Orlando, FL</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="edu-school">Seminole State College</span>
+                            <span class="edu-degree">Associate of Arts (A.A.)</span>
+                        </div>
+                        <div class="edu-right">
+                            <span>April 2025</span>
+                            <span>Sanford, FL</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="stud-strip" aria-hidden="true"></div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section bg-dark">
-        <div class="container">
-            <p class="label light">Say Hello</p>
-            <h2 class="section-title light">Get in Touch</h2>
+    <section id="contact" class="section bg-blue">
+        <div class="container contact-inner">
+            <p class="section-eyebrow light">Say Hello</p>
+            <h2 class="section-title light">Add Me as a Friend</h2>
             <p class="contact-sub">Open to internships, collaborations, and new ideas.</p>
-            <div class="contact-links">
-                <a href="mailto:bashar382@gmail.com" class="contact-link">bashar382@gmail.com ↗</a>
-                <a href="https://linkedin.com/in/tahxmid" target="_blank" rel="noopener" class="contact-link">LinkedIn ↗</a>
-                <a href="https://github.com/tahxmidd" target="_blank" rel="noopener" class="contact-link">GitHub ↗</a>
+            <div class="contact-actions">
+                <a href="mailto:bashar382@gmail.com" class="rbx-btn rbx-btn-green rbx-btn-lg">✉ Email Me</a>
+                <a href="https://linkedin.com/in/tahxmid" target="_blank" rel="noopener" class="rbx-btn rbx-btn-white rbx-btn-lg">LinkedIn ↗</a>
+                <a href="https://github.com/tahxmidd" target="_blank" rel="noopener" class="rbx-btn rbx-btn-white rbx-btn-lg">GitHub ↗</a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container footer-inner">
-            <span>© 2026 Tahmid Bhuiyan</span>
-            <span>Lake Mary, FL</span>
+            <span class="footer-logo">tahxmidd</span>
+            <span>© 2026 Tahmid Bhuiyan · Built with nostalgia in Lake Mary, FL</span>
         </div>
     </footer>
 
